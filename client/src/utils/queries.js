@@ -17,8 +17,8 @@ export const QUERY_PEDALSETTING = gql`
       knobs{
         text
         position
-        conditionType
-        conditionValue
+        knobType
+        knobValue
       }
     }
   }

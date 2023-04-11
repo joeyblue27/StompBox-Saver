@@ -11,11 +11,11 @@ const knobSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
-    conditionType: {
+    knobType: {
       type: String,
       required: false,
     },
-    conditionValue: {
+    knobValue: {
       type: [String],
       validate: {
         validator: function (values) {
