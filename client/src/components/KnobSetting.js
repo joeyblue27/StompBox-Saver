@@ -374,10 +374,7 @@ const KnobSetting = () => {
       >
         Save
       </Button>
-      
-      
     </Box>
-
   </Box>
 );
 };

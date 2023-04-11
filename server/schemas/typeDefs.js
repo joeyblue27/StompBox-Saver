@@ -10,8 +10,8 @@ const typeDefs = gql`
   type Step {
     text: String
     position: Int
-    conditionType: String
-    conditionValue: [String]
+    knobType: String
+    knobValue: [String]
   }
 
   type User {
@@ -49,8 +49,8 @@ const typeDefs = gql`
   input StepInput {
     text: String
     position: Int
-    conditionType: String
-    conditionValue: [String]
+    knobType: String
+    knobValue: [String]
   }
 `;
 

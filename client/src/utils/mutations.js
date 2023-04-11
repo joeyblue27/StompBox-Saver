@@ -50,8 +50,8 @@ export const UPDATE_PEDALSETTING = gql`
       knobs {
         text
         position
-        conditionType
-        conditionValue
+        knobType
+        knobValue
       }
     }
   }

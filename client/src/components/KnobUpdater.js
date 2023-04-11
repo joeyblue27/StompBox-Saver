@@ -18,7 +18,7 @@ const KnobUpdater = ({ pedalsettingId, pedalsetting }) => {
   const [knobs, setKnobs] = useState(
     pedalsetting.knobs.map((knob) => ({
       ...knob,
-      conditionValue: knob.conditionValue || [],
+      knobValue: knob.knobValue || [],
     }))
   );
 
@@ -39,7 +39,7 @@ const KnobUpdater = ({ pedalsettingId, pedalsetting }) => {
     if (e.target.name) {
       newKnobs[index] = {
         ...newKnobs[index],
-        conditionValue: e.target.value,
+        knobValue: e.target.value,
       };
     } else {
       newKnobs[index] = {
