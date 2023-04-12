@@ -1,50 +1,33 @@
-// get users info
-import decode from "jwt-decode";
+require('dotenv').config();
+const jwt = require("jsonwebtoken");
 
-// create new user and get JSON token
-class AuthService {
- 
+const secret = process.env.JWT_SECRET;
 
-  getProfile() {
-    const decodedToken = decode(this.getToken());
-    console.log("Decoded token:", decodedToken);
-    return {
-      id: decodedToken.data._id,
-      email: decodedToken.data.email,
-      username: decodedToken.data.username,
-    };
-  }
+const expiration = "2h";
 
-  getUser() {
-    const decodedToken = decode(this.getToken());
-    console.log("Decoded token:", decodedToken);
-    return decodedToken;
-  }
+module.exports = {
+  authMiddleware: function ({ req }) {
+    let token = req.body.token || req.query.token || req.headers.authorization;
 
-  // return `true` or `false` if token exists (does not verify if it's expired yet)
-  loggedIn() {
-    const token = this.getToken();
-    return token ? true : false;
-  }
+    if (req.headers.authorization) {
+      token = token.split(" ").pop().trim();
+    }
 
-  getToken() {
-    // gets the users token
-    return localStorage.getItem("id_token");
-  }
+    if (!token) {
+      return req;
+    }
 
-  login(idToken) {
-    // saves the users token into local storage
-    localStorage.setItem("id_token", idToken);
-    window.location.assign("/");
-  }
+    try {
+      const { data } = jwt.verify(token, secret, { maxAge: expiration });
+      req.user = data;
+    } catch {
+      console.log("Invalid token");
+    }
 
-  logout() {
-    // logs user out 
-    localStorage.removeItem("id_token");
-    // navigate to homepage
-    window.location.assign("/");
-  }
-}
-
-const authServiceInstance = new AuthService();
-export default authServiceInstance;
+    return req;
+  },
+  signToken: function ({ email, username, _id }) {
+    const payload = { email, username, _id };
+    return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
+  },
+};
