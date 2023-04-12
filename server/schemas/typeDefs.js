@@ -4,10 +4,10 @@ const typeDefs = gql`
   type PedalState {
     _id: ID
     preset: String
-    knobs: [Step]
+    knobs: [Knob]
   }
 
-  type Step {
+  type Knob {
     text: String
     position: Int
     knobType: String
