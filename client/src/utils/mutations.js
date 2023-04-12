@@ -37,7 +37,7 @@ export const UPDATE_PEDALSETTING = gql`
   mutation updatepedalInfo(
     $pedalsettingId: ID!
     $preset: String
-    $knobs: [KnobInput]
+    $knobs: [StepInput]
     $userId: ID
   ) {
     updatepedalInfo(

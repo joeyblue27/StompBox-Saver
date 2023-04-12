@@ -40,13 +40,13 @@ const typeDefs = gql`
     updatepedalInfo(
       pedalsettingId: ID!
       preset: String
-      knobs: [KnobInput]
+      knobs: [StepInput]
       userId: ID
     ): PedalState
     deletepedalInfo(pedalsettingId: ID!, userId: ID!): PedalState
   }
 
-  input KnobInput {
+  input StepInput {
     text: String
     position: Int
     knobType: String
