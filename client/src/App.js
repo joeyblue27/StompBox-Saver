@@ -1,3 +1,4 @@
+import React from "react";
 import pedals from './images/pedalboard.jpg';
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
@@ -6,7 +7,6 @@ import PedalKnob from "./pages/PedalKnob";
 import PedalUpdates from "./pages/PedalUpdates";
 import Preset from "./pages/Preset";
 import MainTabs from "./components/MainTabs";
-import React from "react";
 import {
   ApolloClient,
   InMemoryCache,
