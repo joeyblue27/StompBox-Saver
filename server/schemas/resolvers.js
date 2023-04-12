@@ -1,6 +1,7 @@
 const { PedalState, User } = require("../models");
 const { signToken } = require("../utils/auth"); // Import the signToken function
 const { AuthenticationError } = require("apollo-server-express");
+const mongoose = require("mongoose");
 
 const resolvers = {
   Query: {
