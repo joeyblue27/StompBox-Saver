@@ -1,7 +1,7 @@
 {
-  "name": "guitar-rig-saver",
+  "name": "Guitar-Rig-Saver",
   "version": "1.0.0",
-  "description": "take 4, fourth start over",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node server/server.js --ignore client",
