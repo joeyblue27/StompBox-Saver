@@ -78,7 +78,7 @@ function App() {
               <Route path="/signup" element={<Signup />} />
 
               <Route path="/logout" element={<Index />} />
-              <Route path="*" element={<Index />} />
+              {/* <Route path="*" element={<Index />} /> */}
             </Routes>
             </main>
           </MainTabs>
