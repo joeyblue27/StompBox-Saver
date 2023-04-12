@@ -5,19 +5,16 @@ import Index from "./pages/Index";
 import PedalKnob from "./pages/PedalKnob";
 import PedalUpdates from "./pages/PedalUpdates";
 import Preset from "./pages/Preset";
-
 import MainTabs from "./components/MainTabs";
 import React from "react";
 import {
   ApolloClient,
   InMemoryCache,
   ApolloProvider,
-  ApolloLink,
-  HttpLink,
-  concat,
+  createHttpLink,
 } from "@apollo/client";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import authService from "./utils/auth";
+import { setContext } from '@apollo/client/link/context';
 
 
 const images = [
@@ -37,28 +34,32 @@ const images = [
   
   
   
-  const authMiddleware = new ApolloLink((operation, forward) => {
-    const token = authService.getToken();
-    
-  operation.setContext({
-    headers: {
-      authorization: token ? `Bearer ${token}` : "",
-    },
-  });
 
-  return forward(operation);
+const httpLink = createHttpLink({
+  uri: '/graphql',
 });
 
-const httpLink = new HttpLink({ uri: "/graphql" });
+
+const authLink = setContext((_, { headers }) => {
+  
+  const token = localStorage.getItem('id_token');
+  
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : '',
+    },
+  };
+});
 
 const client = new ApolloClient({
-  link: concat(authMiddleware, httpLink),
+ 
+  link: authLink.concat(httpLink),
   cache: new InMemoryCache(),
 });
 
 function App() {
   return (
-    
       <ApolloProvider client={client}>
         <Router>
           
@@ -84,7 +85,6 @@ function App() {
           </MainTabs>
         </Router>
       </ApolloProvider>
-    
   );
 }
 
