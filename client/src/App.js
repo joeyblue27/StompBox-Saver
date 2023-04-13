@@ -1,4 +1,4 @@
-import pedals from './images/pedalboard.jpg';
+import pedals from './assets/images/pedalboard.jpg';
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Index from "./pages/Index";
