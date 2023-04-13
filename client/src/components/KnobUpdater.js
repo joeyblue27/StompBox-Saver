@@ -107,7 +107,7 @@ const KnobUpdater = ({ pedalsettingId, pedalsetting }) => {
       navigate("/Preset");
       
     } catch (err) {
-      console.error("mutation error", err);
+      console.error("update error", err);
     }
   };
 
@@ -119,14 +119,15 @@ const KnobUpdater = ({ pedalsettingId, pedalsetting }) => {
       <form onSubmit={handleSubmit}>
         <div container spacing={2}>
           <div item xs={12}>
-            <Box sx={{ mb: 2 }}>
+            <Box sx={{ mb: 3 }}
+            position="relative" top="200px"
+            >
              
               <TextField
                 id="preset"
                 name="preset"
                 value={preset}
                 onChange={handleUpdate}
-                fullWidth
               />
             </Box>
           </div>
@@ -136,27 +137,20 @@ const KnobUpdater = ({ pedalsettingId, pedalsetting }) => {
               
                 <TextField
                   id={`text-${index}`}
-            
                   name="text"
                   value={knob.text || ""}
                   onChange={(e) => handleKnobs(e, index)}
-                  fullWidth
                 />
               </Box>
             </div>
           ))}
           <div item xs={12}>
-            <div
-              style={{
-                display: "inline-flex",      
-              }}
-            >
+            <div>
    
               <Button
                 variant="contained"
                 color="warning"
                 type="submit"
-                style={{ marginLeft: "10px" }}
               >
                 Update
               </Button>
@@ -166,10 +160,8 @@ const KnobUpdater = ({ pedalsettingId, pedalsetting }) => {
       </form>
       <div open={isWinpromptOpen} onClose={() => setIsWinpromptOpen(false)}>
         <Box sx={{ p: 2 }}>
-     
         </Box>
         <Box sx={{ p: 2 }}>
-          <Button onClick={() => setIsWinpromptOpen(false)}>Close</Button>
         </Box>
       </div>
     </div>
