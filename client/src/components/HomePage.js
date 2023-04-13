@@ -33,7 +33,7 @@ const HomePage = () => {
 
       <div>
             <h1 align="center">
-              Guitar Rig Saver
+              PedalBoard Saver
             </h1>
             
             <Button onClick={toggleAuthentication}>

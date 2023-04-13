@@ -58,7 +58,7 @@ const client = new ApolloClient({
 
 function App() {
   return (
-    <pedalInfoProvider>
+    
       <ApolloProvider client={client}>
         <Router>
           
@@ -84,7 +84,7 @@ function App() {
           </MainTabs>
         </Router>
       </ApolloProvider>
-    </pedalInfoProvider>
+    
   );
 }
 
