@@ -1,6 +1,6 @@
 # PedalBoard Saver
 
-## How do live musicians remember settings? This asks the big question. Memorizing the settings for the sounds we achieved can be tricky. The app allows an on the road musician to just do that. Using pedals that many of us own or use we can save presets and experiment with new ideas. 
+## How do live musicians remember settings? This asks the big question. Memorizing the settings for the sounds we achieved can be tricky. This encourages an on the road musician to just do that. Using pedals that many of us own or use we can save presets and experiment with new ideas. 
 
 * Save a preset name.
 * Click on any field to set the knob settings.
