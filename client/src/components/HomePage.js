@@ -3,6 +3,8 @@ import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import AuthService from "../utils/auth";
 
+// set the authentication and useState
+
 const HomePage = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const navigate = useNavigate();
@@ -27,6 +29,9 @@ const HomePage = () => {
   useEffect(() => {
     checkAuthStatus();
   }, []);
+
+  
+// creates the page layout
 
   return (
     <>

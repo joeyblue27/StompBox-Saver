@@ -6,6 +6,8 @@ import { Box, Button, TextField } from "@mui/material";
 import AuthService from "../utils/auth"; 
 import { useNavigate } from "react-router-dom"; 
 
+// mutations with navigation
+
 const KnobSetting = () => {
   const navigate = useNavigate();
   const [addpedalKnob] = useMutation(ADD_PEDALSETTING, {
@@ -21,6 +23,7 @@ const KnobSetting = () => {
     },
   });
 
+  // Form states added
   
   const [formState, setFormState] = useState({
     preset: "",
@@ -46,6 +49,8 @@ const KnobSetting = () => {
       [name]: value,
     });
   };
+
+// Box Form layouts with Save buttons
 
   return (
     <Box>

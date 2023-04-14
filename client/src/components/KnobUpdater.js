@@ -9,6 +9,8 @@ import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
 import AuthService from "../utils/auth";
 
+// Set the updater menu
+
 const KnobUpdater = ({ pedalsettingId, pedalsetting }) => {
   const navigate = useNavigate();
   const [isWinpromptOpen, setIsWinpromptOpen] = useState(false);
@@ -21,6 +23,8 @@ const KnobUpdater = ({ pedalsettingId, pedalsetting }) => {
       knobValue: knob.knobValue || [],
     }))
   );
+
+// window prompt created with updated mutations
 
   const openWinprompt = (text) => {
     setWinpromptText(text);
@@ -76,6 +80,8 @@ const KnobUpdater = ({ pedalsettingId, pedalsetting }) => {
     return true;
   };
 
+// updates the settings after modification 
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -113,6 +119,8 @@ const KnobUpdater = ({ pedalsettingId, pedalsetting }) => {
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error: {error.message}</p>;
+
+// Update Page Layout
 
   return (
     <div className="pedalsetting">
