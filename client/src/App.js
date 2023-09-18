@@ -5,7 +5,7 @@ import Index from "./pages/Index";
 import PedalKnob from "./pages/PedalKnob";
 import PedalUpdates from "./pages/PedalUpdates";
 import Preset from "./pages/Preset";
-
+import './assets/css/App.css'
 import MainTabs from "./components/MainTabs";
 import React from "react";
 import {
@@ -20,18 +20,16 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import authService from "./utils/auth";
 
 
-const images = [
-  { "image": pedals, "alt": "guitarpedals" }]
+
   
-  const randomImage = images[Math.floor(Math.random() * images.length)];
-  
-  const styles = {
+  const pedalview = {
     image: {
-     
-      backgroundImage: `url(${randomImage.image})`,
-      backgroundSize: 550,
-      backgroundPosition: 'fixed',
-     
+      height: 'calc(100vh - 50px)',
+      width: '50%',
+      backgroundImage: `url(${pedals})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+         
     },
   }
   
@@ -63,7 +61,7 @@ function App() {
         <Router>
           
           <MainTabs>
-          <main style={styles.image} alt={randomImage.alt}>
+          <main style={pedalview.image}>
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/pedalupdates/:pedalsettingId" element={<PedalUpdates />} />
