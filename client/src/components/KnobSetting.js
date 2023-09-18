@@ -55,45 +55,7 @@ const KnobSetting = () => {
   return (
     <Box>
 
-    <Box
-      
-      component="form"
-      onSubmit={handleFormSubmit}
-      display="flex"
-      flexDirection="row"
-      alignItems=""
-      width="50%"
-      position="relative" right="300px" bottom="15px"
     
-    >
-    <TextField
-        color='warning'
-        name="preset"
-        id="preset"
-        onChange={handleChange}
-        variant="outlined"
-        margin="normal"
-       />
-      <TextField
-        color='warning'
-        name="preset"
-        id="preset"
-        onChange={handleChange}
-        variant="outlined"
-        margin="normal"
-       
-      />
-         <TextField
-        
-        color='warning'
-        name="preset"
-        id="preset"
-        onChange={handleChange}
-        variant="outlined"
-        margin="normal"
-       />
- 
-    </Box>
     <Box
       
       component="form"
@@ -101,8 +63,8 @@ const KnobSetting = () => {
       display="flex"
       flexDirection="row"
       alignItems=""
-      width="50%"
-      position="relative" right="300px" top="140px"
+      width="100%"
+      position="relative" left="50px" top="305px"
     
     >
     <TextField
@@ -140,8 +102,8 @@ const KnobSetting = () => {
       display="flex"
       flexDirection="row"
       alignItems=""
-      width="50%"
-      position="relative" left="250px" bottom="175px"
+      width="100%"
+      position="relative" left="50px" top="550px"
     
     >
     <TextField
@@ -172,6 +134,7 @@ const KnobSetting = () => {
        />
 
     </Box>
+   
     <Box
       
       component="form"
@@ -179,156 +142,8 @@ const KnobSetting = () => {
       display="flex"
       flexDirection="row"
       alignItems=""
-      width="50%"
-      position="relative" left="250px" bottom="20px"
-    
-    >
-    <TextField
-        color='warning'
-        name="preset"
-        id="preset"
-        onChange={handleChange}
-        variant="outlined"
-        margin="normal"
-       />
-      <TextField
-        color='warning'
-        name="preset"
-        id="preset"
-        onChange={handleChange}
-        variant="outlined"
-        margin="normal"
-       
-      />
-         <TextField
-        
-        color='warning'
-        name="preset"
-        id="preset"
-        onChange={handleChange}
-        variant="outlined"
-        margin="normal"
-       />
-
-    </Box>
-    <Box
-      
-      component="form"
-      onSubmit={handleFormSubmit}
-      display="flex"
-      flexDirection="row"
-      alignItems=""
-      width="50%"
-      position="relative" left="780px" bottom="335px"
-    
-    >
-    <TextField
-        color='warning'
-        name="preset"
-        id="preset"
-        onChange={handleChange}
-        variant="outlined"
-        margin="normal"
-       />
-      <TextField
-        color='warning'
-        name="preset"
-        id="preset"
-        onChange={handleChange}
-        variant="outlined"
-        margin="normal"
-       
-      />
-         <TextField
-        
-        color='warning'
-        name="preset"
-        id="preset"
-        onChange={handleChange}
-        variant="outlined"
-        margin="normal"
-       />
-
-    </Box>
-    <Box
-      
-      component="form"
-      onSubmit={handleFormSubmit}
-      display="flex"
-      flexDirection="row"
-      alignItems=""
-      width="50%"
-      position="relative" left="780px" bottom="180px"
-    
-    >
-    <TextField
-        color='warning'
-        name="preset"
-        id="preset"
-        onChange={handleChange}
-        variant="outlined"
-        margin="normal"
-       />
-      <TextField
-        color='warning'
-        name="preset"
-        id="preset"
-        onChange={handleChange}
-        variant="outlined"
-        margin="normal"
-       
-      />
-         <TextField
-        
-        color='warning'
-        name="preset"
-        id="preset"
-        onChange={handleChange}
-        variant="outlined"
-        margin="normal"
-       />
-
-      
-    </Box>
-    <Box
-      
-      component="form"
-      onSubmit={handleFormSubmit}
-      display="flex"
-      flexDirection="row"
-      width="50%"
-      position="relative" right="200px" bottom="-10px"
-    
-    >
-    <TextField
-        color='warning'
-        name="preset"
-        id="preset"
-        onChange={handleChange}
-        variant="outlined"
-        margin="normal"
-       />
-
-      <Button
-        type="submit"
-        variant="contained"
-        color="warning"
-        size="small"
-        mt={4}
-      >
-        Save
-      </Button>
-      
-    </Box>
-    <Box
-      
-      component="form"
-      onSubmit={handleFormSubmit}
-      display="flex"
-      flexDirection="row"
-      alignItems=""
-      width="50%"
-      position="relative" left="300px" bottom="70px"
+      width="100%"
+      position="relative" left="1000px" bottom="150px"
     
     >
     <TextField
@@ -350,36 +165,7 @@ const KnobSetting = () => {
         Save
       </Button>
     </Box>
-    <Box
-      
-      component="form"
-      onSubmit={handleFormSubmit}
-      display="flex"
-      flexDirection="row"
-      alignItems=""
-      width="50%"
-      position="relative" left="900px" bottom="150px"
-    
-    >
-    <TextField
-        color='warning'
-        name="preset"
-        id="preset"
-        onChange={handleChange}
-        variant="outlined"
-        margin="normal"
-       />
 
-      <Button
-        type="submit"
-        variant="contained"
-        color="warning"
-        size="small"
-        mt={4}
-      >
-        Save
-      </Button>
-    </Box>
   </Box>
 );
 };
