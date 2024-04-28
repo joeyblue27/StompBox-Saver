@@ -3,6 +3,7 @@ import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import AuthService from "../utils/auth";
 
+
 // set the authentication and useState
 
 const HomePage = () => {
@@ -41,12 +42,21 @@ const HomePage = () => {
               PedalBoard Saver
             </h1>
             
-            <Button onClick={toggleAuthentication}>
+            <Button onClick={toggleAuthentication}
+               type="submit"
+               variant="contained"
+               color="warning"
+               size="small">
               {isAuthenticated ? "Logout" : "Login"}
+              
             </Button>
             
             {!isAuthenticated && (
-              <Button onClick={handleSignUp}>
+              <Button onClick={handleSignUp}
+              type="submit"
+              variant="contained"
+              color="warning"
+              size="small">
                 Sign Up
               </Button>
             )}
