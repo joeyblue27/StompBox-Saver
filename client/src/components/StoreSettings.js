@@ -107,7 +107,7 @@ const StoreSettings = () => {
                 
                 <Button
                   variant="contained"
-                  color="warning"
+                  color="success"
                   type="submit"
                   
                   onClick={() => handleUpdate(pedalsetting._id)}
@@ -119,7 +119,7 @@ const StoreSettings = () => {
               
                 <Button
                  variant="contained"
-                 color="warning"
+                 color="error"
                  type="submit"
                  style={{float: 'right'}}
                   onClick={() => handleClear(pedalsetting._id)}
