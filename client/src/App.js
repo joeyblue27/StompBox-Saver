@@ -8,6 +8,7 @@ import Preset from "./pages/Preset";
 import './assets/css/App.css'
 import MainTabs from "./components/MainTabs";
 import React from "react";
+
 import {
   ApolloClient,
   InMemoryCache,
@@ -28,8 +29,7 @@ import authService from "./utils/auth";
       width: '50%',
       backgroundImage: `url(${pedals})`,
       backgroundSize: 'cover',
-      backgroundPosition: 'center',
-         
+      backgroundPosition: 'center',    
     },
   }
   

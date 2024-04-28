@@ -1,12 +1,16 @@
 import React from "react";
 import { useQuery, useMutation } from "@apollo/client";
 import { Link, useNavigate } from "react-router-dom";
-import {Button,List,ListItem,ListItemSecondaryAction,ListItemText} from "@mui/material";
+import {Typography,Button,List,ListItemSecondaryAction,ListItemText,ListItem} from "@mui/material";
 
 import AuthService from "../utils/auth";
 
 import { QUERY_PEDALSETTINGS } from "../utils/queries";
 import { DELETE_PEDALSETTING } from "../utils/mutations";
+
+const text = {
+  color: 'black'
+}
 
 const StoreSettings = () => {
   const user = AuthService.getProfile();
@@ -65,32 +69,59 @@ const StoreSettings = () => {
   };
 
   return (
-    <div sx={{ maxWidth: 600, margin: "0 auto" }}>
+    <Typography>
+    <div sx={{ margin: "0 auto" }}
+    >
       <div variant="h4" component="h2" gutterBottom>
+      
         
       </div>
       {loading ? (
         <div sx={{ display: "flex",  marginTop: 2 }}><div/>
         </div>
       ) : (
-        <List>
+       
+        <List
+        style={{
+          
+          width: '100%',
+          position: 'relative',
+          left: '105%', 
+          
+        }}>
+          
           {pedalsettings.map((pedalsetting) => (
             <ListItem key={pedalsetting._id}>
               <Link
                 to={`/pedalsetting/${pedalsetting._id}`}
-                style={{ textDecoration: "none" }}
-              >
-                <ListItemText primary={pedalsetting.preset} />
+                style={{ textDecoration: "none" }}>
+                
+                <ListItemText primary={pedalsetting.preset} 
+                 style={text}
+                />
               </Link>
-              <ListItemSecondaryAction>
+              <ListItemSecondaryAction
+                   
+                
+              >
+                
                 <Button
+                  variant="contained"
+                  color="warning"
+                  type="submit"
                   
                   onClick={() => handleUpdate(pedalsetting._id)}
+                  
+                  
                 >
                   Update
                 </Button>
+              
                 <Button
-                 
+                 variant="contained"
+                 color="warning"
+                 type="submit"
+                 style={{float: 'right'}}
                   onClick={() => handleClear(pedalsetting._id)}
                 >
                   Clear
@@ -101,6 +132,7 @@ const StoreSettings = () => {
         </List>
       )}
     </div>
+    </Typography>
   );
 };
 

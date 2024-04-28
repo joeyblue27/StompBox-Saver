@@ -53,87 +53,11 @@ const KnobSetting = () => {
 // Box Form layouts with Save buttons
 
   return (
-    <Box>
+    
 
     
-    <Box
-      
-      component="form"
-      onSubmit={handleFormSubmit}
-      display="flex"
-      flexDirection="row"
-      alignItems=""
-      width="100%"
-      position="relative" left="50px" top="305px"
-    
-    >
-    <TextField
-        color='warning'
-        name="preset"
-        id="preset"
-        onChange={handleChange}
-        variant="outlined"
-        margin="normal"
-       />
-      <TextField
-        color='warning'
-        name="preset"
-        id="preset"
-        onChange={handleChange}
-        variant="outlined"
-        margin="normal"
-       
-      />
-         <TextField
-        
-        color='warning'
-        name="preset"
-        id="preset"
-        onChange={handleChange}
-        variant="outlined"
-        margin="normal"
-       />
 
-    </Box>
-    <Box
-      
-      component="form"
-      onSubmit={handleFormSubmit}
-      display="flex"
-      flexDirection="row"
-      alignItems=""
-      width="100%"
-      position="relative" left="50px" top="550px"
     
-    >
-    <TextField
-        color='warning'
-        name="preset"
-        id="preset"
-        onChange={handleChange}
-        variant="outlined"
-        margin="normal"
-       />
-      <TextField
-        color='warning'
-        name="preset"
-        id="preset"
-        onChange={handleChange}
-        variant="outlined"
-        margin="normal"
-       
-      />
-         <TextField
-        
-        color='warning'
-        name="preset"
-        id="preset"
-        onChange={handleChange}
-        variant="outlined"
-        margin="normal"
-       />
-
-    </Box>
    
     <Box
       
@@ -143,7 +67,7 @@ const KnobSetting = () => {
       flexDirection="row"
       alignItems=""
       width="100%"
-      position="relative" left="1000px" bottom="150px"
+      position="relative" left="1000px"
     
     >
     <TextField
@@ -166,7 +90,7 @@ const KnobSetting = () => {
       </Button>
     </Box>
 
-  </Box>
+  
 );
 };
 
