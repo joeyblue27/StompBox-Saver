@@ -8,7 +8,6 @@
 * Modify the knob settings or choose to clear.
 
 ![image 1](./demo/expedal.png) 
-![image 2](./demo/pedalshow.gif) 
 
 
 ## Deploy (Heroku)
