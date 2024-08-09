@@ -1,6 +1,6 @@
 /* adjust the height of the main section to match the larger header */
-@media screen and (max-width: 500px) {
+/* @media screen and (max-width: 500px) {
   main {
     height: calc(100vh - 75px) !important;
   }
-}
+} */
