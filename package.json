@@ -20,6 +20,8 @@
     "concurrently": "^7.6.0",
     "jsonwebtoken": "^9.0.0",
     "mongodb": "^5.2.0",
+    "react-bootstrap": "^2.10.5",
+    "react-slideshow-image": "^4.3.2",
     "uuid": "^9.0.0"
   }
 }

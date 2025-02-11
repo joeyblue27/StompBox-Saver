@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import AuthService from "../utils/auth";
+import '../assets/css/homepage.css';
 
 
 // set the authentication and useState
@@ -60,6 +61,7 @@ const HomePage = () => {
                 Sign Up
               </Button>
             )}
+            
       </div>
     </>
   );

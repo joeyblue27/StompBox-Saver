@@ -6,6 +6,8 @@ import { Box } from "@mui/system";
 import KnobUpdater from "../components/KnobUpdater";
 import { QUERY_PEDALSETTING } from "../utils/queries";
 
+
+
 const PedalUpdates = () => {
   const { pedalsettingId } = useParams();
   const { data: queryData } = useQuery(QUERY_PEDALSETTING, {

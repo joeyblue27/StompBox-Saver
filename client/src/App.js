@@ -1,4 +1,3 @@
-import pedals from './assets/images/pedalboard.jpg';
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Index from "./pages/Index";
@@ -8,6 +7,8 @@ import Preset from "./pages/Preset";
 import './assets/css/App.css'
 import MainTabs from "./components/MainTabs";
 import React from "react";
+
+
 
 import {
   ApolloClient,
@@ -23,15 +24,6 @@ import authService from "./utils/auth";
 
 
   
-  const pedalview = {
-    image: {
-      height: 'calc(100vh - 50px)',
-      width: '50%',
-      backgroundImage: `url(${pedals})`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',    
-    },
-  }
   
   
   
@@ -61,7 +53,7 @@ function App() {
         <Router>
           
           <MainTabs>
-          <main style={pedalview.image}>
+          
             <Routes>
               <Route path="/" element={<Index />} />
               <Route path="/pedalupdates/:pedalsettingId" element={<PedalUpdates />} />
@@ -78,7 +70,7 @@ function App() {
               <Route path="/logout" element={<Index />} />
               <Route path="*" element={<Index />} />
             </Routes>
-            </main>
+            
           </MainTabs>
         </Router>
       </ApolloProvider>
