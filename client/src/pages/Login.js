@@ -7,7 +7,7 @@ import Auth from "../utils/auth";
 
 const Login = (props) => {
   const [formState, setFormState] = useState({ email: "", password: "" });
-  const [login, { error, data }] = useMutation(LOGIN_USER);
+  const [login, { data }] = useMutation(LOGIN_USER);
 
   // update state based on form input changes
   const handleChange = (event) => {
@@ -41,11 +41,11 @@ const Login = (props) => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
-      <div className="col-12 col-lg-10">
-        <div className="card">
-          <h4 className="card-header bg-warning text-light p-2">Login</h4>
-          <div className="card-body">
+   
+     
+       <main>
+          <h4>Enter Login</h4>
+         
             {data ? (
               <p>
                 Success! You may now head{" "}
@@ -78,16 +78,11 @@ const Login = (props) => {
                 </button>
               </form>
             )}
+            </main>
 
-            {error && (
-              <div className="my-3 p-3 bg-danger text-white">
-                {error.message}
-              </div>
-            )}
-          </div>
-        </div>
-      </div>
-    </main>
+    
+         
+     
   );
 };
 
