@@ -1,13 +1,19 @@
+
 import React, { useState } from 'react';
 import { Container, Box } from "@mui/material";
 import KnobSetting from "../components/KnobSetting";
 import StoreSettings from "../components/StoreSettings";
 import '../assets/css/preset.css';
-import '../assets/css/preset.css';
-
+import Chorus from '../assets/images/bpedals/chorus.png';
+import Distortion from '../assets/images/bpedals/distortion.png';
+import Equalizer from '../assets/images/bpedals/equalizer.png';
+import Metaldist from '../assets/images/bpedals/metaldist.png';
+import Overdrive from '../assets/images/bpedals/overdrive.png';
+import Schorus from '../assets/images/bpedals/schorus.png';
 
 const Preset = () => {
   const [isDropdownOpen, setDropdownOpen] = useState(false);
+  const [visiblePedal, setVisiblePedal] = useState(""); // State to manage the visible pedal
 
   const toggleDropdown = () => {
     setDropdownOpen(prevState => !prevState);
@@ -24,6 +30,11 @@ const Preset = () => {
         item.style.display = "none";
       }
     });
+  };
+
+  const handlePedalClick = (pedal) => {
+    // Set the visible pedal based on the clicked pedal
+    setVisiblePedal(pedal);
   };
 
   return (
@@ -49,19 +60,27 @@ const Preset = () => {
               type="text"
               id="myInput"
               onKeyUp={filterDropdown}
-              placeholder="Search for options..."
+              placeholder="Search..."
             />
-            <a href="#about">CHORUS</a>
-            
-            <a href="#base">DISTORTION</a>
-            <a href="#blog">EQUALIZER</a>
-            <a href="#contact">METALDIST</a>
-            <a href="#custom">OVERDRIVE</a>
-            <a href="#support">S.CHORUS</a>
-            
+            <a href="#" onClick={() => handlePedalClick("chorus")}>CHORUS</a>
+            <a href="#" onClick={() => handlePedalClick("schorus")} style={{whiteSpace: 'nowrap'}}>SUPER CHORUS</a>
+            <a href="#" onClick={() => handlePedalClick("distortion")}>DISTORTION</a>
+            <a href="#" onClick={() => handlePedalClick("equalizer")}>EQUALIZER</a>
+            <a href="#" onClick={() => handlePedalClick("metaldist")}>METALDIST</a>
+            <a href="#" onClick={() => handlePedalClick("overdrive")}>OVERDRIVE</a>
           </div>
         )}
       </div>
+
+      {/* Conditionally render the visible pedal image */}
+      <Box mt={4}>
+        {visiblePedal === "chorus" && <img src={Chorus} alt="Chorus Pedal" style={{ maxWidth: '100%', height: 'auto' }} />}
+        {visiblePedal === "distortion" && <img src={Distortion} alt="Distortion Pedal" style={{ maxWidth: '100%', height: 'auto' }} />}
+        {visiblePedal === "equalizer" && <img src={Equalizer} alt="Equalizer Pedal" style={{ maxWidth: '100%', height: 'auto' }} />}
+        {visiblePedal === "metaldist" && <img src={Metaldist} alt="Metaldist Pedal" style={{ maxWidth: '100%', height: 'auto' }} />}
+        {visiblePedal === "overdrive" && <img src={Overdrive} alt="Overdive Pedal" style={{ maxWidth: '100%', height: 'auto' }} />}
+        {visiblePedal === "schorus" && <img src={Schorus} alt="S-Chorus Pedal" style={{ maxWidth: '100%', height: 'auto' }} />}
+      </Box>
     </Container>
   );
 };
