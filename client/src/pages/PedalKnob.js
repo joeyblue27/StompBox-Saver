@@ -21,7 +21,7 @@ const PedalKnob = () => {
 
   const pedalsetting = data?.pedalsetting || [];
   return (
-    <Box sx={{ mt: 5 }}>
+    <Box>
       <div>
         <div variant="h3" gutterBottom
         

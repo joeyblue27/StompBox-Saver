@@ -55,11 +55,11 @@ function App() {
           <MainTabs>
           
             <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="/pedalupdates/:pedalsettingId" element={<PedalUpdates />} />
               <Route
                 path="/Preset"
                 element={<Preset />}/>
+              <Route path="/" element={<Index />} />
+              <Route path="/pedalupdates/:pedalsettingId" element={<PedalUpdates />} />
               <Route
                 path="/pedalsetting/:pedalsettingId"
                 element={<PedalKnob />}
