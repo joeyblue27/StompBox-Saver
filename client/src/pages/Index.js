@@ -1,9 +1,11 @@
 import React from "react";
 import { Box } from "@mui/material";
 
+
+
 const Index = () => {
   return (
-    <Box
+     <Box
       sx={{
         display: "flex",
         justifyContent: "center",
@@ -31,6 +33,7 @@ const Index = () => {
     </Box>
   );
 };
+
 
 
 

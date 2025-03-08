@@ -86,7 +86,7 @@ const StoreSettings = () => {
           
           width: '100%',
           position: 'relative',
-          left: '105%', 
+         
           
         }}>
           
@@ -121,7 +121,7 @@ const StoreSettings = () => {
                  variant="contained"
                  color="error"
                  type="submit"
-                 style={{float: 'right'}}
+                 
                   onClick={() => handleClear(pedalsetting._id)}
                 >
                   Clear

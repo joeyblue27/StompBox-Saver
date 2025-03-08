@@ -3,12 +3,20 @@ import { Button } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import AuthService from "../utils/auth";
 import '../assets/css/homepage.css';
-
+import { Box, Container } from '@mui/material';
+import KnobSetting from './KnobSetting';  // Adjust this import if it's a real component
+import StoreSettings from './StoreSettings';  // Adjust this import if it's a real component
+import Chorus from '../assets/images/bpedals/chorus.png';
+import Distortion from '../assets/images/bpedals/distortion.png';
+import Equalizer from '../assets/images/bpedals/equalizer.png';
+import Metaldist from '../assets/images/bpedals/metaldist.png';
+import Overdrive from '../assets/images/bpedals/overdrive.png';
+import Schorus from '../assets/images/bpedals/schorus.png';
 
 // set the authentication and useState
-
 const HomePage = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [visiblePedal, setVisiblePedal] = useState(""); // State to manage the visible pedal
   const navigate = useNavigate();
 
   const handleSignUp = () => {
@@ -32,38 +40,84 @@ const HomePage = () => {
     checkAuthStatus();
   }, []);
 
-  
-// creates the page layout
+  const handlePedalClick = (pedal) => {
+    // Set the visible pedal based on the clicked pedal
+    setVisiblePedal(pedal);
+  };
+
+  const filterDropdown = (event) => {
+    const input = event.target.value.toUpperCase();
+    const dropdownItems = document.querySelectorAll("#myDropdown a");
+    dropdownItems.forEach(item => {
+      const text = item.textContent || item.innerText;
+      if (text.toUpperCase().includes(input)) {
+        item.style.display = "";
+      } else {
+        item.style.display = "none";
+      }
+    });
+  };
 
   return (
-    <>
+    <div>
+      <h1 align="center">PedalBoard Saver</h1>
 
-      <div>
-            <h1 align="center">
-              PedalBoard Saver
-            </h1>
-            
-            <Button onClick={toggleAuthentication}
-               type="submit"
-               variant="contained"
-               color="warning"
-               size="small">
-              {isAuthenticated ? "Logout" : "Login"}
-              
-            </Button>
-            
-            {!isAuthenticated && (
-              <Button onClick={handleSignUp}
-              type="submit"
-              variant="contained"
-              color="warning"
-              size="small">
-                Sign Up
-              </Button>
-            )}
-            
-      </div>
-    </>
+      {/* Authentication Buttons */}
+      <Button onClick={toggleAuthentication} type="submit" variant="contained" color="warning" size="small">
+        {isAuthenticated ? "Logout" : "Login"}
+      </Button>
+
+      {!isAuthenticated && (
+        <Button onClick={handleSignUp} type="submit" variant="contained" color="warning" size="small">
+          Sign Up
+        </Button>
+      )}
+
+      <Container>
+        <Box display='flex' flexDirection='row' justifyContent='space-evenly'>
+      {/* Dropdown menu (always visible) */}
+          <div className="dropdown">
+            <button className="dropbtn">
+              Pedals
+            </button>
+            <div id="myDropdown" className="dropdown-content">
+              {filterDropdown}
+              <button onClick={() => handlePedalClick("chorus")}>CHORUS</button>
+              <button onClick={() => handlePedalClick("schorus")} style={{ whiteSpace: 'nowrap' }}>SUPER CHORUS</button>
+              <button onClick={() => handlePedalClick("distortion")}>DISTORTION</button>
+              <button onClick={() => handlePedalClick("equalizer")}>EQUALIZER</button>
+              <button onClick={() => handlePedalClick("metaldist")}>METALDIST</button>
+              <button onClick={() => handlePedalClick("overdrive")}>OVERDRIVE</button>
+            </div>
+          </div>
+        </Box>
+
+        {/* Conditionally render the visible pedal image */}
+        {visiblePedal && (
+          <Box>
+            {visiblePedal === "chorus" && <img src={Chorus} alt="Chorus Pedal" style={{ maxWidth: '500px', height: '500px' }} />}
+            {visiblePedal === "distortion" && <img src={Distortion} alt="Distortion Pedal" style={{ maxWidth: '500px', height: '500px' }} />}
+            {visiblePedal === "equalizer" && <img src={Equalizer} alt="Equalizer Pedal" style={{ maxWidth: '500px', height: '500px' }} />}
+            {visiblePedal === "metaldist" && <img src={Metaldist} alt="Metaldist Pedal" style={{ maxWidth: '500px', height: '500px' }} />}
+            {visiblePedal === "overdrive" && <img src={Overdrive} alt="Overdrive Pedal" style={{ maxWidth: '500px', height: '500px' }} />}
+            {visiblePedal === "schorus" && <img src={Schorus} alt="S-Chorus Pedal" style={{ maxWidth: '500px', height: '500px' }} />}
+          </Box>
+          
+        )}
+        
+        
+        {isAuthenticated && (
+          <>
+            <Box color="orange">
+              <KnobSetting />
+            </Box>
+            <Box color="orange">
+              <StoreSettings />
+            </Box>
+          </>
+        )}
+      </Container>
+    </div>
   );
 };
 

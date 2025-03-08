@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Container, Box } from "@mui/material";
 import KnobSetting from "../components/KnobSetting";
@@ -12,12 +11,7 @@ import Overdrive from '../assets/images/bpedals/overdrive.png';
 import Schorus from '../assets/images/bpedals/schorus.png';
 
 const Preset = () => {
-  const [isDropdownOpen, setDropdownOpen] = useState(false);
   const [visiblePedal, setVisiblePedal] = useState(""); // State to manage the visible pedal
-
-  const toggleDropdown = () => {
-    setDropdownOpen(prevState => !prevState);
-  };
 
   const filterDropdown = (event) => {
     const input = event.target.value.toUpperCase();
@@ -38,48 +32,50 @@ const Preset = () => {
   };
 
   return (
-    <Container maxWidth="md" sx={{ minHeight: "80vh" }}>
-      <div variant="h3" component="h1" color='orange' gutterBottom>
-        {/* Placeholder for header or title */}
-      </div>
-      <Box color='orange' mt={4}>
+    <Container>
+      
+
+      {/* Flex container for dropdown and image */}
+      <Box display='flex' >
+   
+      <Box color='orange'>
         <KnobSetting />
       </Box>
-      <Box color='orange' mt={4}>
+      <Box color='orange'>
         <StoreSettings />
       </Box>
 
-      {/* Dropdown menu */}
-      <div className="dropdown">
-        <button onClick={toggleDropdown} className="dropbtn">
-          Pedals
-        </button>
-        {isDropdownOpen && (
+        {/* Dropdown menu */}
+        <div className="dropdown">
+          <button className="dropbtn">
+            Pedals
+          </button>
+        
           <div id="myDropdown" className="dropdown-content">
-            <input
-              type="text"
-              id="myInput"
-              onKeyUp={filterDropdown}
-              placeholder="Search..."
-            />
-            <a href="#" onClick={() => handlePedalClick("chorus")}>CHORUS</a>
-            <a href="#" onClick={() => handlePedalClick("schorus")} style={{whiteSpace: 'nowrap'}}>SUPER CHORUS</a>
-            <a href="#" onClick={() => handlePedalClick("distortion")}>DISTORTION</a>
-            <a href="#" onClick={() => handlePedalClick("equalizer")}>EQUALIZER</a>
-            <a href="#" onClick={() => handlePedalClick("metaldist")}>METALDIST</a>
-            <a href="#" onClick={() => handlePedalClick("overdrive")}>OVERDRIVE</a>
+            
+           
+          {filterDropdown}
+          
+           
+            <button onClick={() => handlePedalClick("chorus")}>CHORUS</button>
+            <button onClick={() => handlePedalClick("schorus")} style={{ whiteSpace: 'nowrap' }}>SUPER CHORUS</button>
+            <button onClick={() => handlePedalClick("distortion")}>DISTORTION</button>
+            <button onClick={() => handlePedalClick("equalizer")}>EQUALIZER</button>
+            <button onClick={() => handlePedalClick("metaldist")}>METALDIST</button>
+            <button onClick={() => handlePedalClick("overdrive")}>OVERDRIVE</button>
           </div>
-        )}
-      </div>
+        </div>
 
-      {/* Conditionally render the visible pedal image */}
-      <Box mt={4}>
-        {visiblePedal === "chorus" && <img src={Chorus} alt="Chorus Pedal" style={{ maxWidth: '100%', height: 'auto' }} />}
-        {visiblePedal === "distortion" && <img src={Distortion} alt="Distortion Pedal" style={{ maxWidth: '100%', height: 'auto' }} />}
-        {visiblePedal === "equalizer" && <img src={Equalizer} alt="Equalizer Pedal" style={{ maxWidth: '100%', height: 'auto' }} />}
-        {visiblePedal === "metaldist" && <img src={Metaldist} alt="Metaldist Pedal" style={{ maxWidth: '100%', height: 'auto' }} />}
-        {visiblePedal === "overdrive" && <img src={Overdrive} alt="Overdive Pedal" style={{ maxWidth: '100%', height: 'auto' }} />}
-        {visiblePedal === "schorus" && <img src={Schorus} alt="S-Chorus Pedal" style={{ maxWidth: '100%', height: 'auto' }} />}
+      
+        {/* Conditionally render the visible pedal image */}
+        <Box>
+          {visiblePedal === "chorus" && <img src={Chorus} alt="Chorus Pedal" style={{ maxWidth: '500px', height: '500px' }} />}
+          {visiblePedal === "distortion" && <img src={Distortion} alt="Distortion Pedal" style={{ maxWidth: '500px', height: '500px' }} />}
+          {visiblePedal === "equalizer" && <img src={Equalizer} alt="Equalizer Pedal" style={{ maxWidth: '500px', height: '500px' }} />}
+          {visiblePedal === "metaldist" && <img src={Metaldist} alt="Metaldist Pedal" style={{ maxWidth: '500px', height: '500px' }} />}
+          {visiblePedal === "overdrive" && <img src={Overdrive} alt="Overdive Pedal" style={{ maxWidth: '500px', height: '500px' }} />}
+          {visiblePedal === "schorus" && <img src={Schorus} alt="S-Chorus Pedal" style={{ maxWidth: '500px', height: '500px' }} />}
+        </Box>
       </Box>
     </Container>
   );

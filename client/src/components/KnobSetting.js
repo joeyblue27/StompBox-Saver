@@ -67,7 +67,7 @@ const KnobSetting = () => {
       flexDirection="row"
       alignItems=""
       width="100%"
-      position="relative" left="1000px"
+      
     
     >
     <TextField
