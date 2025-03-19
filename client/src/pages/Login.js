@@ -48,7 +48,7 @@ const Login = (props) => {
          
             {data ? (
               <p>
-                Success! You may now head{" "}
+                Success!{" "}
                 <Link to="/">back to the homepage.</Link>
               </p>
             ) : (
