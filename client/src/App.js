@@ -7,9 +7,6 @@ import Preset from "./pages/Preset";
 import './assets/css/App.css'
 import MainTabs from "./components/MainTabs";
 import React from "react";
-
-
-
 import {
   ApolloClient,
   InMemoryCache,
@@ -21,12 +18,6 @@ import {
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import authService from "./utils/auth";
 
-
-
-  
-  
-  
-  
   const authMiddleware = new ApolloLink((operation, forward) => {
     const token = authService.getToken();
     

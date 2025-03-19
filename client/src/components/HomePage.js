@@ -9,7 +9,7 @@ import StoreSettings from './StoreSettings';  // Adjust this import if it's a re
 import Chorus from '../assets/images/bpedals/chorus.png';
 import Distortion from '../assets/images/bpedals/distortion.png';
 import Equalizer from '../assets/images/bpedals/equalizer.png';
-import Metaldist from '../assets/images/bpedals/metaldist.png';
+import Distortion2 from '../assets/images/bpedals/distortion2.png';
 import Overdrive from '../assets/images/bpedals/overdrive.png';
 import Schorus from '../assets/images/bpedals/schorus.png';
 
@@ -60,22 +60,22 @@ const HomePage = () => {
 
   return (
     <div>
-      <h1 align="center">PedalBoard Saver</h1>
+      <h1 align="center">Pedal Saver</h1>
 
       {/* Authentication Buttons */}
-      <Button onClick={toggleAuthentication} type="submit" variant="contained" color="warning" size="small">
+      <Button onClick={toggleAuthentication} type="submit" variant="contained" color="secondary" size="small">
         {isAuthenticated ? "Logout" : "Login"}
       </Button>
 
       {!isAuthenticated && (
-        <Button onClick={handleSignUp} type="submit" variant="contained" color="warning" size="small">
+        <Button onClick={handleSignUp} type="submit" variant="contained" color="secondary" size="small">
           Sign Up
         </Button>
       )}
 
+      {/* Dropdown menu*/}
       <Container>
         <Box display='flex' flexDirection='row' justifyContent='space-evenly'>
-      {/* Dropdown menu (always visible) */}
           <div className="dropdown">
             <button className="dropbtn">
               Pedals
@@ -85,8 +85,8 @@ const HomePage = () => {
               <button onClick={() => handlePedalClick("chorus")}>CHORUS</button>
               <button onClick={() => handlePedalClick("schorus")} style={{ whiteSpace: 'nowrap' }}>SUPER CHORUS</button>
               <button onClick={() => handlePedalClick("distortion")}>DISTORTION</button>
+              <button onClick={() => handlePedalClick("distortion2")}>DISTORTION2</button>
               <button onClick={() => handlePedalClick("equalizer")}>EQUALIZER</button>
-              <button onClick={() => handlePedalClick("metaldist")}>METALDIST</button>
               <button onClick={() => handlePedalClick("overdrive")}>OVERDRIVE</button>
             </div>
           </div>
@@ -95,26 +95,26 @@ const HomePage = () => {
         {/* Conditionally render the visible pedal image */}
         {visiblePedal && (
           <Box>
-            {visiblePedal === "chorus" && <img src={Chorus} alt="Chorus Pedal" style={{ maxWidth: '500px', height: '500px' }} />}
-            {visiblePedal === "distortion" && <img src={Distortion} alt="Distortion Pedal" style={{ maxWidth: '500px', height: '500px' }} />}
-            {visiblePedal === "equalizer" && <img src={Equalizer} alt="Equalizer Pedal" style={{ maxWidth: '500px', height: '500px' }} />}
-            {visiblePedal === "metaldist" && <img src={Metaldist} alt="Metaldist Pedal" style={{ maxWidth: '500px', height: '500px' }} />}
-            {visiblePedal === "overdrive" && <img src={Overdrive} alt="Overdrive Pedal" style={{ maxWidth: '500px', height: '500px' }} />}
-            {visiblePedal === "schorus" && <img src={Schorus} alt="S-Chorus Pedal" style={{ maxWidth: '500px', height: '500px' }} />}
+            {visiblePedal === "chorus" && <img src={Chorus} alt="Chorus Pedal" style={{ maxWidth: '300px', height: '300px' }} />}
+            {visiblePedal === "distortion" && <img src={Distortion} alt="Distortion Pedal" style={{ maxWidth: '300px', height: '300px' }} />}
+            {visiblePedal === "equalizer" && <img src={Equalizer} alt="Equalizer Pedal" style={{ maxWidth: '300px', height: '300px' }} />}
+            {visiblePedal === "distortion2" && <img src={Distortion2} alt="Distortion2 Pedal" style={{ maxWidth: '300px', height: '300px' }} />}
+            {visiblePedal === "overdrive" && <img src={Overdrive} alt="Overdrive Pedal" style={{ maxWidth: '300px', height: '300px' }} />}
+            {visiblePedal === "schorus" && <img src={Schorus} alt="S-Chorus Pedal" style={{ maxWidth: '300px', height: '300px' }} />}
           </Box>
           
         )}
         
         
         {isAuthenticated && (
-          <>
-            <Box color="orange">
+          <div>
+          <Box color="orange">
               <KnobSetting />
             </Box>
             <Box color="orange">
               <StoreSettings />
             </Box>
-          </>
+          </div>
         )}
       </Container>
     </div>
