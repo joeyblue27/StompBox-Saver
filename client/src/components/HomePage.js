@@ -63,15 +63,17 @@ const HomePage = () => {
       <h1 align="center">Pedal Saver</h1>
 
       {/* Authentication Buttons */}
-      <Button onClick={toggleAuthentication} type="submit" variant="contained" color="secondary" size="small">
+      <Box display="flex" justifyContent='space-between'>
+      <Button id="signup" onClick={toggleAuthentication} type="submit"  >
         {isAuthenticated ? "Logout" : "Login"}
       </Button>
 
       {!isAuthenticated && (
-        <Button onClick={handleSignUp} type="submit" variant="contained" color="secondary" size="small">
+        <Button id="signup" onClick={handleSignUp} type="submit"  >
           Sign Up
         </Button>
-      )}
+       )}
+       </Box>
 
       {/* Dropdown menu*/}
       <Container>

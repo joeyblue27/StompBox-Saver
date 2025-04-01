@@ -2,9 +2,10 @@ import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { ADD_PEDALSETTING } from "../utils/mutations";
 import { QUERY_PEDALSETTINGS } from "../utils/queries";
-import { Box, Button, TextField } from "@mui/material";
+import { Box, TextField } from "@mui/material";
 import AuthService from "../utils/auth"; 
 import { useNavigate } from "react-router-dom"; 
+import '../assets/css/homepage.css';
 
 // mutations with navigation
 
@@ -71,7 +72,7 @@ const KnobSetting = () => {
     
     >
     <TextField
-        color='warning'
+        
         name="preset"
         id="preset"
         onChange={handleChange}
@@ -79,15 +80,9 @@ const KnobSetting = () => {
         margin="normal"
        />
 
-      <Button
-        type="submit"
-        variant="contained"
-        color="warning"
-        size="small"
-        mt={4}
-      >
+      <button className="dropbtn">
         Save
-      </Button>
+      </button>
     </Box>
 
   

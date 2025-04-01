@@ -1,10 +1,9 @@
 import React from "react";
 import { useQuery, useMutation } from "@apollo/client";
 import { Link, useNavigate } from "react-router-dom";
-import {Typography,Button,List,ListItemSecondaryAction,ListItemText,ListItem} from "@mui/material";
-
+import {Typography,List,ListItemSecondaryAction,ListItemText,ListItem} from "@mui/material";
+import '../assets/css/homepage.css';
 import AuthService from "../utils/auth";
-
 import { QUERY_PEDALSETTINGS } from "../utils/queries";
 import { DELETE_PEDALSETTING } from "../utils/mutations";
 
@@ -83,11 +82,8 @@ const StoreSettings = () => {
        
         <List
         style={{
-          
           width: '100%',
           position: 'relative',
-         
-          
         }}>
           
           {pedalsettings.map((pedalsetting) => (
@@ -105,27 +101,17 @@ const StoreSettings = () => {
                 
               >
                 
-                <Button
-                  variant="contained"
-                  color="success"
-                  type="submit"
-                  
+                <button id='signup'
                   onClick={() => handleUpdate(pedalsetting._id)}
-                  
-                  
                 >
                   Update
-                </Button>
+                </button>
               
-                <Button
-                 variant="contained"
-                 color="error"
-                 type="submit"
-                 
+                <button id='signup'
                   onClick={() => handleClear(pedalsetting._id)}
                 >
                   Clear
-                </Button>
+                </button>
               </ListItemSecondaryAction>
             </ListItem>
           ))}
