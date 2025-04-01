@@ -1,12 +1,95 @@
-@media screen and (max-width: 500px) {
-    main {
-      height: calc(100vh - 75px) !important;
-    }
-  }
+@media screen and (max-width: 1920px) {
+  
+body {
+  background: rgb(237, 238, 223);
+}
 
 h1 {
-  font-size: 35px;
-  font-family: 'Handlee', cursive;
-  position: relative;
+font-size: 35px;
+font-family: "Permanent Marker", cursive;
+position: relative;
 color:rgb(37, 78, 131);
+border: 3px solid rgb(18, 14, 66);  
+padding: 10px;  
+width: 25%;
+text-align: center;  
+border-radius: 10px;  
+display: block; 
+margin: 0 auto;  
 }
+
+button {
+  font-family: "Permanent Marker", cursive;
+  color:rgb(0, 0, 0);
+  background: rgb(243, 255, 227);
+  padding: 5px;
+}
+
+#signup {
+  font-family: "Permanent Marker", cursive;
+  background-color:rgb(136, 72, 72);
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+}
+
+img {
+  position: relative;
+}
+
+  .dropdown-content {
+      min-width: 100%; 
+    }
+  
+  .dropbtn {
+    background-color:rgb(72, 85, 136);
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+    border: none;
+    border-radius: 4px;
+  }
+  
+  .dropdown-content {
+    display: grid;
+    position: relative;
+    background-color: #f6f6f6;
+    min-width: 150px;
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    z-index: 1;
+    border-radius: 4px;
+    box-shadow: 0px 8px 16px rgba(4, 32, 108, 0.2);
+  }
+  
+  .dropdown-content a:focus {
+    outline: none;
+  }
+
+  .dropdown-content {
+    aria-live: assertive; 
+  }
+  
+  }
+  
+  @media screen and (max-width: 1024px)
+  {
+h1 {
+  display: inline;
+}
+  }
+
+  @media screen and (max-width: 480px)
+  {
+h1 {
+  display: inline;
+}
+  }
+
+
+
+
+

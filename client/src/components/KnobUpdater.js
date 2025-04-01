@@ -3,7 +3,6 @@ import { useMutation } from "@apollo/client";
 import { UPDATE_PEDALSETTING } from "../utils/mutations";
 import { QUERY_PEDALSETTING, QUERY_PEDALSETTINGS } from "../utils/queries";
 import { useNavigate } from "react-router-dom";
-import { Button } from "@mui/material";
 import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
 import AuthService from "../utils/auth";
@@ -127,7 +126,7 @@ const KnobUpdater = ({ pedalsettingId, pedalsetting }) => {
         <div container spacing={2}>
           <div item xs={12}>
             <Box sx={{ mb: 3 }}
-            /* position="relative" top="200px" left="1000px" */
+            
             >
              
               <TextField
@@ -154,14 +153,12 @@ const KnobUpdater = ({ pedalsettingId, pedalsetting }) => {
           <div>
             <div>
    
-              <Button
-                variant="contained"
-                color="warning"
-                type="submit"
+              <button className='dropbtn'
+
                 style={{float: 'right'}}
               >
                 Update
-              </Button>
+              </button>
             </div>
           </div>
         </div>

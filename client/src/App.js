@@ -3,8 +3,7 @@ import Signup from "./pages/Signup";
 import Index from "./pages/Index";
 import PedalKnob from "./pages/PedalKnob";
 import PedalUpdates from "./pages/PedalUpdates";
-import Preset from "./pages/Preset";
-import './assets/css/App.css'
+import HomePage from "./components/HomePage";
 import MainTabs from "./components/MainTabs";
 import React from "react";
 import {
@@ -47,8 +46,8 @@ function App() {
           
             <Routes>
               <Route
-                path="/Preset"
-                element={<Preset />}/>
+                path="/HomePage"
+                element={<HomePage />}/>
               <Route path="/" element={<Index />} />
               <Route path="/pedalupdates/:pedalsettingId" element={<PedalUpdates />} />
               <Route
