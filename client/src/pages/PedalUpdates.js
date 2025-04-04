@@ -29,7 +29,7 @@ const PedalUpdates = () => {
   return (
     <Box sx={{ width: "50%", height: "80vh"}}>
       <h2>
-        Update Settings
+        Update Settings:
       </h2>
       <KnobUpdater pedalsettingId={pedalsettingId} pedalsetting={pedalsetting} />
     </Box>

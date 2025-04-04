@@ -125,9 +125,7 @@ const KnobUpdater = ({ pedalsettingId, pedalsetting }) => {
       <form onSubmit={handleSubmit}>
         <div container spacing={2}>
           <div item xs={12}>
-            <Box sx={{ mb: 3 }}
-            
-            >
+            <Box display='flex' flexDirection='row'>
              
               <TextField
                 id="preset"
@@ -139,7 +137,7 @@ const KnobUpdater = ({ pedalsettingId, pedalsetting }) => {
           </div>
           {knobs.map((knob, index) => (
             <div item xs={12} key={index}>
-              <Box sx={{ mb: 2 }}>
+              <Box>
               
                 <TextField
                   id={`text-${index}`}
@@ -153,10 +151,7 @@ const KnobUpdater = ({ pedalsettingId, pedalsetting }) => {
           <div>
             <div>
    
-              <button className='dropbtn'
-
-                style={{float: 'right'}}
-              >
+              <button className='save-btn'>
                 Update
               </button>
             </div>
@@ -164,10 +159,6 @@ const KnobUpdater = ({ pedalsettingId, pedalsetting }) => {
         </div>
       </form>
       <div open={isWinpromptOpen} onClose={() => setIsWinpromptOpen(false)}>
-        <Box sx={{ p: 2 }}>
-        </Box>
-        <Box sx={{ p: 2 }}>
-        </Box>
       </div>
     </div>
   );

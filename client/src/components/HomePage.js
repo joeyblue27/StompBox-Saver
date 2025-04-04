@@ -60,10 +60,10 @@ const HomePage = () => {
 
   return (
     <div>
-      <h1 align="center">Pedal Saver</h1>
+      <h1 align="center">Stomp Box Saver</h1>
 
       {/* Authentication Buttons */}
-      <Box display="flex" justifyContent='space-between'>
+      <Box display="flex" justifyContent='space-evenly'>
       <Button id="signup" onClick={toggleAuthentication} type="submit"  >
         {isAuthenticated ? "Logout" : "Login"}
       </Button>

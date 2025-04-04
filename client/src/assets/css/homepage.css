@@ -1,12 +1,14 @@
-@media screen and (max-width: 1920px) {
-  
+
 body {
   background: rgb(237, 238, 223);
+  
 }
 
 h1 {
 font-size: 35px;
-font-family: "Permanent Marker", cursive;
+font-family: "Lilita One", sans-serif;
+font-weight: 400;
+font-style: normal;
 position: relative;
 color:rgb(37, 78, 131);
 border: 3px solid rgb(18, 14, 66);  
@@ -19,14 +21,18 @@ margin: 0 auto;
 }
 
 button {
-  font-family: "Permanent Marker", cursive;
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   color:rgb(0, 0, 0);
   background: rgb(243, 255, 227);
-  padding: 5px;
+  padding: 10px;
 }
 
 #signup {
-  font-family: "Permanent Marker", cursive;
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
   background-color:rgb(136, 72, 72);
   color: white;
   padding: 10px;
@@ -37,13 +43,29 @@ button {
 
 img {
   position: relative;
+  bottom: 100px;
+  left: 100px;
 }
 
-  .dropdown-content {
+.form-input {
+  padding: 15px; 
+}
+
+.save-btn {
+  background-color:rgb(72, 85, 136);
+  color: white;
+  font-size: 20px;
+  padding: 10px; 
+}
+
+.dropdown-content {
       min-width: 100%; 
+      top: 100px;
     }
   
-  .dropbtn {
+.dropbtn {
+    position: relative;
+    top: 100px;
     background-color:rgb(72, 85, 136);
     color: white;
     padding: 10px;
@@ -52,7 +74,7 @@ img {
     border-radius: 4px;
   }
   
-  .dropdown-content {
+.dropdown-content {
     display: grid;
     position: relative;
     background-color: #f6f6f6;
@@ -65,31 +87,128 @@ img {
     box-shadow: 0px 8px 16px rgba(4, 32, 108, 0.2);
   }
   
-  .dropdown-content a:focus {
+.dropdown-content a:focus {
     outline: none;
   }
 
-  .dropdown-content {
+.dropdown-content {
     aria-live: assertive; 
   }
   
-  }
+  @media (max-width: 1024px) {
+    body {
+      background: rgb(237, 238, 223); 
+    }
   
-  @media screen and (max-width: 1024px)
-  {
-h1 {
-  display: inline;
-}
+    h1 {
+      font-size: 28px; 
+      width: 80%; 
+      padding: 8px; 
+    }
+  
+    img {
+      position: relative;
+      bottom: 50px; 
+      left: 50px; 
+    }
+  
+    .form-input {
+      padding: 10px; 
+    }
+  
+    .save-btn {
+      font-size: 16px; 
+      padding: 8px; 
+    }
+  
+    .dropdown-content {
+      min-width: 100%; 
+      top: 100px; 
+    }
+  
+    .dropbtn {
+      font-size: 20pxpx; 
+      padding: 15px; 
+    }
   }
 
-  @media screen and (max-width: 480px)
-  {
-h1 {
-  display: inline;
-}
+  @media (max-width: 720px) {
+    body {
+      background: rgb(237, 238, 223); 
+    }
+  
+    h1 {
+      font-size: 28px; 
+      width: 80%; 
+      padding: 8px; 
+    }
+  
+    img {
+      position: relative;
+      bottom: 50px; 
+      left: 50px; 
+    }
+  
+    .form-input {
+      padding: 10px; 
+    }
+  
+    .save-btn {
+      font-size: 16px; 
+      padding: 8px; 
+    }
+  
+    .dropdown-content {
+      min-width: 100%; 
+      top: 100px; 
+      left: 100px;
+    }
+  
+    .dropbtn {
+      font-size: 16px; 
+      padding: 8px; 
+      left: 100px;
+    }
   }
 
 
+  @media (max-width: 480px) {
+    body {
+      background: rgb(237, 238, 223); 
+    }
+  
+    h1 {
+      font-size: 28px; 
+      width: 80%; 
+      padding: 8px; 
+    }
+  
+    img {
+      position: relative;
+      bottom: 50px; 
+      left: 50px; 
+    }
+  
+    .form-input {
+      padding: 10px; 
+    }
+  
+    .save-btn {
+      font-size: 16px; 
+      padding: 8px; 
+    }
+  
+    .dropdown-content {
+      left: 100px;
+      min-width: 100%; 
+      top: 100px; 
+    }
+  
+    .dropbtn {
+      left: 100px;
+      font-size: 16px;
+      padding: 8px; 
+    }
+  }
 
-
-
+   
