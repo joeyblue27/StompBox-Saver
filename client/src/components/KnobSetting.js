@@ -77,10 +77,9 @@ const KnobSetting = () => {
         id="preset"
         onChange={handleChange}
         variant="outlined"
-        margin="normal"
        />
 
-      <button className="dropbtn">
+      <button className="save-btn">
         Save
       </button>
     </Box>

@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../utils/mutations";
+import '../assets/css/homepage.css';
 
 import Auth from "../utils/auth";
 
@@ -51,7 +51,7 @@ const Signup = () => {
     <main className="">
       <div className="">
         <div className="card">
-          <h4 className="card-header p-2">Sign Up</h4>
+          <h4 className="card-header p-2">Sign Up:</h4>
           <div className="card-body">
             {data ? (
               <p>
@@ -89,7 +89,7 @@ const Signup = () => {
                   onChange={handleChange}
                 />
                 <button
-                  className="btn btn-block bg-info"
+                  className="save-btn"
                   style={{ cursor: "pointer" }}
                   type="submit"
                 >

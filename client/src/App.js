@@ -1,6 +1,6 @@
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-import Index from "./pages/Index";
+
 import PedalKnob from "./pages/PedalKnob";
 import PedalUpdates from "./pages/PedalUpdates";
 import HomePage from "./components/HomePage";
@@ -48,7 +48,7 @@ function App() {
               <Route
                 path="/HomePage"
                 element={<HomePage />}/>
-              <Route path="/" element={<Index />} />
+              <Route path="/"  />
               <Route path="/pedalupdates/:pedalsettingId" element={<PedalUpdates />} />
               <Route
                 path="/pedalsetting/:pedalsettingId"
@@ -57,8 +57,8 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
 
-              <Route path="/logout" element={<Index />} />
-              <Route path="*" element={<Index />} />
+              <Route path="/logout"  />
+              <Route path="*"  />
             </Routes>
             
           </MainTabs>

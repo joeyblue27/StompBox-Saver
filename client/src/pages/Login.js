@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../utils/mutations";
+import '../assets/css/homepage.css';
 
 import Auth from "../utils/auth";
 
@@ -44,8 +45,7 @@ const Login = (props) => {
    
      
        <main>
-          <h4>Enter Login</h4>
-         
+        <h4 className="card-header p-2">Enter Login:</h4>
             {data ? (
               <p>
                 Success!{" "}
@@ -70,11 +70,11 @@ const Login = (props) => {
                   onChange={handleChange}
                 />
                 <button
-                  className="btn btn-block btn-info"
+                  className="save-btn"
                   style={{ cursor: "pointer" }}
                   type="submit"
                 >
-                  Enter
+                  Submit
                 </button>
               </form>
             )}
