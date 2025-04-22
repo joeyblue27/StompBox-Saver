@@ -71,18 +71,15 @@ const StoreSettings = () => {
     <Typography>
     <div sx={{ margin: "0 auto" }}
     >
-      <div variant="h4" component="h2" gutterBottom>
-      
-        
-      </div>
+   
       {loading ? (
-        <div sx={{ display: "flex",  marginTop: 2 }}><div/>
+        <div sx={{ display: "flex",  marginTop: 1 }}><div/>
         </div>
       ) : (
        
         <List
         style={{
-          width: '100%',
+          width: '50%',
           position: 'relative',
         }}>
           

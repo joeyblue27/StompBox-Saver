@@ -4,8 +4,8 @@ import { useNavigate } from "react-router-dom";
 import AuthService from "../utils/auth";
 import '../assets/css/homepage.css';
 import { Box, Container } from '@mui/material';
-import KnobSetting from './KnobSetting';  // Adjust this import if it's a real component
-import StoreSettings from './StoreSettings';  // Adjust this import if it's a real component
+import KnobSetting from './KnobSetting';  
+import StoreSettings from './StoreSettings'; 
 import Chorus from '../assets/images/bpedals/chorus.png';
 import Distortion from '../assets/images/bpedals/distortion.png';
 import Equalizer from '../assets/images/bpedals/equalizer.png';
@@ -16,7 +16,7 @@ import Schorus from '../assets/images/bpedals/schorus.png';
 // set the authentication and useState
 const HomePage = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [visiblePedal, setVisiblePedal] = useState(""); // State to manage the visible pedal
+  const [visiblePedal, setVisiblePedal] = useState("chorus"); // State to manage the visible pedal
   const navigate = useNavigate();
 
   const handleSignUp = () => {
@@ -61,13 +61,10 @@ const HomePage = () => {
   return (
     <div>
       <h1 align="center">Stomp Box Saver</h1>
-
-      {/* Authentication Buttons */}
       <Box display="flex" justifyContent='space-evenly'>
-      <Button id="signup" onClick={toggleAuthentication} type="submit"  >
+      <Button id="signup" onClick={toggleAuthentication} type="submit">
         {isAuthenticated ? "Logout" : "Login"}
       </Button>
-
       {!isAuthenticated && (
         <Button id="signup" onClick={handleSignUp} type="submit"  >
           Sign Up
@@ -110,10 +107,10 @@ const HomePage = () => {
         
         {isAuthenticated && (
           <div>
-          <Box color="orange">
+          <Box>
               <KnobSetting />
             </Box>
-            <Box color="orange">
+            <Box>
               <StoreSettings />
             </Box>
           </div>

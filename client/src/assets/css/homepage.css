@@ -30,6 +30,7 @@ button {
 }
 
 #signup {
+  position: relative;
   font-family: "Lilita One", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -41,6 +42,13 @@ button {
   border-radius: 4px;
 }
 
+.preset {
+  position: relative;
+  bottom: 100px;
+  left: 400px;
+  width: 50%;
+}
+
 img {
   position: relative;
   bottom: 100px;
@@ -48,14 +56,30 @@ img {
 }
 
 .form-input {
+  position: relative;
+  bottom: 100px;
+  left: 400px;
   padding: 15px; 
 }
 
 .save-btn {
+  position: relative;
   background-color:rgb(72, 85, 136);
   color: white;
   font-size: 20px;
   padding: 10px; 
+  left: 400px;
+  bottom: 100px;
+}
+
+.update-btn {
+  position: relative;
+  background-color:rgb(72, 85, 136);
+  color: white;
+  font-size: 20px;
+  padding: 10px; 
+  left: 250px;
+  bottom: 50px;
 }
 
 .dropdown-content {
@@ -95,120 +119,175 @@ img {
     aria-live: assertive; 
   }
   
-  @media (max-width: 1024px) {
+  @media screen and (max-width: 1024px) {
     body {
       background: rgb(237, 238, 223); 
     }
   
     h1 {
       font-size: 28px; 
-      width: 80%; 
+      width: 25%; 
       padding: 8px; 
     }
   
     img {
-      position: relative;
-      bottom: 50px; 
-      left: 50px; 
+      display: flex;
+      flex-direction: column;
     }
   
+    .preset {
+      display: flex;
+      flex-direction: column;
+      left: 300px;
+      width: 50%;
+    }
+
     .form-input {
-      padding: 10px; 
+      display: flex;
+      flex-direction: column;
+      left: 200px;
+      padding: 10px;
     }
   
     .save-btn {
+      display: flex;
+      flex-direction: column;
+      left: 300px;
       font-size: 16px; 
-      padding: 8px; 
+      padding: 16px; 
     }
   
     .dropdown-content {
+      display: flex;
+      flex-direction: column;
       min-width: 100%; 
       top: 100px; 
+      left: 100px;
     }
   
     .dropbtn {
-      font-size: 20pxpx; 
-      padding: 15px; 
+      display: flex;
+      flex-direction: column;
+      font-size: 16px; 
+      padding: 8px; 
+      left: 100px;
+    }
+    #signup {
+      position: relative;
+      left: 200px;
     }
   }
 
-  @media (max-width: 720px) {
+
+  @media screen and (max-width: 720px) {
     body {
       background: rgb(237, 238, 223); 
     }
   
     h1 {
       font-size: 28px; 
-      width: 80%; 
+      width: 50%; 
       padding: 8px; 
     }
   
     img {
-      position: relative;
-      bottom: 50px; 
-      left: 50px; 
+      display: flex;
+      flex-direction: column;
     }
   
+    .preset {
+      display: flex;
+      flex-direction: column;
+      left: 200px;
+    }
+
     .form-input {
       padding: 10px; 
     }
   
     .save-btn {
+      display: flex;
+      flex-direction: column;
+      left: 200px;
       font-size: 16px; 
-      padding: 8px; 
+      padding: 16px; 
     }
   
     .dropdown-content {
+      display: flex;
+      flex-direction: column;
       min-width: 100%; 
       top: 100px; 
       left: 100px;
     }
   
     .dropbtn {
+      display: flex;
+      flex-direction: column;
       font-size: 16px; 
       padding: 8px; 
       left: 100px;
     }
+    #signup {
+      position: relative;
+      left: 200px;
+    }
   }
-
-
-  @media (max-width: 480px) {
+  
+  @media screen and (max-width: 600px) {
     body {
       background: rgb(237, 238, 223); 
     }
   
     h1 {
       font-size: 28px; 
-      width: 80%; 
+      width: 50%; 
       padding: 8px; 
     }
   
     img {
-      position: relative;
-      bottom: 50px; 
-      left: 50px; 
+      display: flex;
+      flex-direction: column;
     }
   
+    .preset {
+      display: flex;
+      flex-direction: column;
+      left: 200px;
+    }
+
     .form-input {
       padding: 10px; 
     }
   
     .save-btn {
+      display: flex;
+      flex-direction: column;
+      left: 200px;
       font-size: 16px; 
-      padding: 8px; 
+      padding: 16px; 
     }
   
     .dropdown-content {
-      left: 100px;
+      display: flex;
+      flex-direction: column;
       min-width: 100%; 
       top: 100px; 
+      left: 100px;
     }
   
     .dropbtn {
-      left: 100px;
-      font-size: 16px;
+      display: flex;
+      flex-direction: column;
+      font-size: 16px; 
       padding: 8px; 
+      left: 100px;
+    }
+
+    #signup {
+      position: relative;
+      left: 200px;
     }
   }
 
-   
+  

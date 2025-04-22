@@ -54,27 +54,18 @@ const KnobSetting = () => {
 // Box Form layouts with Save buttons
 
   return (
-    
 
-    
-
-    
-   
     <Box
-      
       component="form"
       onSubmit={handleFormSubmit}
       display="flex"
       flexDirection="row"
       alignItems=""
       width="100%"
-      
-    
     >
     <TextField
-        
         name="preset"
-        id="preset"
+        className="preset"
         onChange={handleChange}
         variant="outlined"
        />
