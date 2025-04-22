@@ -45,7 +45,7 @@ const Login = (props) => {
    
      
        <main>
-        <h4 className="card-header p-2">Enter Login:</h4>
+        
             {data ? (
               <p>
                 Success!{" "}

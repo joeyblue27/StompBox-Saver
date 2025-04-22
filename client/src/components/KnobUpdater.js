@@ -151,7 +151,7 @@ const KnobUpdater = ({ pedalsettingId, pedalsetting }) => {
           <div>
             <div>
    
-              <button className='save-btn'>
+              <button className='update-btn'>
                 Update
               </button>
             </div>

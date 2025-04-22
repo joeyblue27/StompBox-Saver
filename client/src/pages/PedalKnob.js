@@ -5,9 +5,6 @@ import { Box } from "@mui/material";
 import { QUERY_PEDALSETTING } from "../utils/queries";
 
 
-
-
-
 const PedalKnob = () => {
   const { pedalsettingId } = useParams();
 

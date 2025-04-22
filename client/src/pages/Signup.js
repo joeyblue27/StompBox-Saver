@@ -51,7 +51,6 @@ const Signup = () => {
     <main className="">
       <div className="">
         <div className="card">
-          <h4 className="card-header p-2">Sign Up:</h4>
           <div className="card-body">
             {data ? (
               <p>
@@ -61,7 +60,7 @@ const Signup = () => {
             ) : (
               <form onSubmit={handleFormSubmit}>
                 <input
-                flexDirection="column"
+                  flexDirection="row"
                   className="form-input"
                   placeholder="Your username"
                   name="username"
@@ -71,7 +70,7 @@ const Signup = () => {
                 />
 
                 <input
-                flexDirection="column"
+                  flexDirection="row"
                   className="form-input"
                   placeholder="Your email"
                   name="email"
@@ -80,7 +79,7 @@ const Signup = () => {
                   onChange={handleChange}
                 />
                 <input
-                flexDirection="column"
+                flexDirection="row"
                   className="form-input"
                   placeholder="******"
                   name="password"

@@ -52,7 +52,7 @@ function App() {
               <Route path="/pedalupdates/:pedalsettingId" element={<PedalUpdates />} />
               <Route
                 path="/pedalsetting/:pedalsettingId"
-                element={<PedalKnob />}
+                element={<PedalKnob/>}
               />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
