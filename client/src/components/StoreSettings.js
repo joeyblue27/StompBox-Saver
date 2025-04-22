@@ -107,7 +107,7 @@ const StoreSettings = () => {
                 <button id='signup'
                   onClick={() => handleClear(pedalsetting._id)}
                 >
-                  Clear
+                  Remove
                 </button>
               </ListItemSecondaryAction>
             </ListItem>
