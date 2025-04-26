@@ -41,9 +41,16 @@ const HomePage = () => {
   }, []);
 
   const handlePedalClick = (pedal) => {
-    // Set the visible pedal based on the clicked pedal
     setVisiblePedal(pedal);
+    setPressedButton(pedal);
+  
+    // Remove the pressed state after a short delay
+    setTimeout(() => {
+      setPressedButton(null);
+    }, 150);
   };
+
+  
 
   const filterDropdown = (event) => {
     const input = event.target.value.toUpperCase();
@@ -57,6 +64,10 @@ const HomePage = () => {
       }
     });
   };
+
+  const [pressedButton, setPressedButton] = useState(null);
+
+
 
   return (
     <div>
@@ -81,12 +92,13 @@ const HomePage = () => {
             </button>
             <div id="myDropdown" className="dropdown-content">
               {filterDropdown}
-              <button onClick={() => handlePedalClick("chorus")}>CHORUS</button>
-              <button onClick={() => handlePedalClick("schorus")} style={{ whiteSpace: 'nowrap' }}>SUPER CHORUS</button>
-              <button onClick={() => handlePedalClick("distortion")}>DISTORTION</button>
-              <button onClick={() => handlePedalClick("distortion2")}>DISTORTION2</button>
-              <button onClick={() => handlePedalClick("equalizer")}>EQUALIZER</button>
-              <button onClick={() => handlePedalClick("overdrive")}>OVERDRIVE</button>
+            <button onClick={() => handlePedalClick("chorus")} className={pressedButton === "chorus" ? "button-pressed" : ""}>CHORUS</button>
+            <button onClick={() => handlePedalClick("schorus")} className={pressedButton === "schorus" ? "button-pressed" : ""} 
+              style={{ whiteSpace: 'nowrap' }}>SUPER CHORUS</button>
+            <button onClick={() => handlePedalClick("distortion")} className={pressedButton === "distortion" ? "button-pressed" : ""}>DISTORTION</button>
+            <button onClick={() => handlePedalClick("distortion2")} className={pressedButton === "distortion2" ? "button-pressed" : ""}>DISTORTION2</button>
+            <button onClick={() => handlePedalClick("equalizer")} className={pressedButton === "equalizer" ? "button-pressed" : ""}>EQUALIZER</button>
+            <button onClick={() => handlePedalClick("overdrive")} className={pressedButton === "overdrive" ? "button-pressed" : ""}>OVERDRIVE</button>
             </div>
           </div>
         </Box>

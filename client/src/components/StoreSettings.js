@@ -98,13 +98,13 @@ const StoreSettings = () => {
                 
               >
                 
-                <button id='signup'
+                <button id='update-btn'
                   onClick={() => handleUpdate(pedalsetting._id)}
                 >
                   Update
                 </button>
               
-                <button id='signup'
+                <button id='update-btn'
                   onClick={() => handleClear(pedalsetting._id)}
                 >
                   Remove
