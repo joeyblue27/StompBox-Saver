@@ -48,10 +48,8 @@ const Signup = () => {
   }
 
   return (
-    <main className="">
-      <div className="">
-        <div className="card">
-          <div className="card-body">
+    <main>
+          <div>
             {data ? (
               <p>
                 Success! You may now head{" "}
@@ -60,7 +58,6 @@ const Signup = () => {
             ) : (
               <form onSubmit={handleFormSubmit}>
                 <input
-                  flexDirection="row"
                   className="form-input"
                   placeholder="Your username"
                   name="username"
@@ -70,7 +67,6 @@ const Signup = () => {
                 />
 
                 <input
-                  flexDirection="row"
                   className="form-input"
                   placeholder="Your email"
                   name="email"
@@ -79,7 +75,6 @@ const Signup = () => {
                   onChange={handleChange}
                 />
                 <input
-                flexDirection="row"
                   className="form-input"
                   placeholder="******"
                   name="password"
@@ -88,7 +83,7 @@ const Signup = () => {
                   onChange={handleChange}
                 />
                 <button
-                  className="save-btn"
+                  className="submit-btn"
                   style={{ cursor: "pointer" }}
                   type="submit"
                 >
@@ -98,12 +93,10 @@ const Signup = () => {
             )}
 
             {error && (
-              <div className="my-3 p-3 bg-info text-white">
+              <div>
                 {error.message}
               </div>
             )}
-          </div>
-        </div>
       </div>
     </main>
   );

@@ -1,10 +1,7 @@
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
-
-import PedalKnob from "./pages/PedalKnob";
 import PedalUpdates from "./pages/PedalUpdates";
 import HomePage from "./components/HomePage";
-import MainTabs from "./components/MainTabs";
 import React from "react";
 import {
   ApolloClient,
@@ -42,7 +39,7 @@ function App() {
       <ApolloProvider client={client}>
         <Router>
           
-          <MainTabs>
+        <HomePage />
           
             <Routes>
               <Route
@@ -50,18 +47,16 @@ function App() {
                 element={<HomePage />}/>
               <Route path="/"  />
               <Route path="/pedalupdates/:pedalsettingId" element={<PedalUpdates />} />
-              <Route
-                path="/pedalsetting/:pedalsettingId"
-                element={<PedalKnob/>}
-              />
+
               <Route path="/login" element={<Login />} />
+              <Route path="/pedalupdates" element={<PedalUpdates />} /> {/* <-- ADD THIS */}
               <Route path="/signup" element={<Signup />} />
 
               <Route path="/logout"  />
               <Route path="*"  />
             </Routes>
             
-          </MainTabs>
+          
         </Router>
       </ApolloProvider>
     

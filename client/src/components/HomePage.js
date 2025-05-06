@@ -72,7 +72,7 @@ const HomePage = () => {
   return (
     <div>
       <h1 align="center">Stomp Box Saver</h1>
-      <Box display="flex" justifyContent='space-evenly'>
+      <Box>
       <Button id="signup" onClick={toggleAuthentication} type="submit">
         {isAuthenticated ? "Logout" : "Login"}
       </Button>
@@ -103,7 +103,7 @@ const HomePage = () => {
           </div>
         </Box>
 
-        {/* Conditionally render the visible pedal image */}
+        {/* render the visible pedal image */}
         {visiblePedal && (
           <Box>
             {visiblePedal === "chorus" && <img src={Chorus} alt="Chorus Pedal" style={{ maxWidth: '300px', height: '300px' }} />}
