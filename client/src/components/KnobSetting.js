@@ -20,7 +20,7 @@ const KnobSetting = () => {
     ],
     awaitRefetchQueries: true, 
     onCompleted: () => {
-      navigate("/Preset"); 
+      navigate("/PedalUpdates"); 
     },
   });
 

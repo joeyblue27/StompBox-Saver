@@ -7,9 +7,6 @@ import AuthService from "../utils/auth";
 import { QUERY_PEDALSETTINGS } from "../utils/queries";
 import { DELETE_PEDALSETTING } from "../utils/mutations";
 
-const text = {
-  color: 'black'
-}
 
 const StoreSettings = () => {
   const user = AuthService.getProfile();
@@ -69,28 +66,22 @@ const StoreSettings = () => {
 
   return (
     <Typography>
-    <div sx={{ margin: "0 auto" }}
-    >
+    <div>
    
       {loading ? (
-        <div sx={{ display: "flex",  marginTop: 1 }}><div/>
+        <div><div/>
         </div>
       ) : (
        
-        <List
-        style={{
-          width: '50%',
-          position: 'relative',
-        }}>
+        <List>
           
           {pedalsettings.map((pedalsetting) => (
-            <ListItem key={pedalsetting._id}>
+            <ListItem key={pedalsetting._id} className="update-input">
               <Link
                 to={`/pedalsetting/${pedalsetting._id}`}
                 style={{ textDecoration: "none" }}>
                 
                 <ListItemText primary={pedalsetting.preset} 
-                 style={text}
                 />
               </Link>
               <ListItemSecondaryAction

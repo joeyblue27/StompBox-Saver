@@ -17,11 +17,6 @@ const PedalKnob = () => {
   return (
     <Box>
       <div>
-        <div variant="h3" gutterBottom
-        
-        >
-          Presets
-        </div>
         {loading ? (
           <div />
         ) : (
