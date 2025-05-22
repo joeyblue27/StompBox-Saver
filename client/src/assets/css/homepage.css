@@ -463,14 +463,13 @@ img {
       position: relative; 
       font-size: 10px;
       margin: -5px;
-      top: -40px;
+      top: -35px;
       left: 10px;
     }
 
 #update-btn {
       position: relative; 
       left: 0px;
-      top: 25px;
       font-size: 15px; 
       padding: 5px; 
     }
