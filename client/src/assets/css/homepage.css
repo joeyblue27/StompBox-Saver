@@ -77,8 +77,8 @@ img {
   position: relative;
   color: black;
   font-size: 20px;
-  left: 700px;
-  bottom: 500px;
+  left: 0px;
+  bottom: 0px;
 }
 
 .save-btn {
@@ -115,10 +115,23 @@ img {
   padding: 10px;
   font-size: 16px;
   border-radius: 6px;
-  left: 100px;
-  bottom: 500px;
+  bottom: 0px;
+  left: -400px;
 }
 
+.saveup-btn {
+  position: relative;
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color:rgb(72, 85, 136);
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  bottom: 0px;
+  left: 0px;
+}
   
 .dropbtn {
     position: relative;
@@ -154,33 +167,41 @@ img {
     aria-live: assertive; 
   }
   
-  @media screen and (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   
-    h1 {
+h1 {
       font-size: 40px; 
       padding: 8px; 
     }
   
-    img {
+img {
       display: flex;
       flex-direction: column;
     }
   
-    .preset {
+.preset {
       display: flex;
       flex-direction: column;
       left: 300px;
       width: 40%;
     }
 
-    .form-input {
+.form-input {
       display: flex;
       flex-direction: column;
       left: 200px;
       padding: 10px;
     }
-  
-    .save-btn {
+
+.update-input .MuiListItemText-primary{
+  position: relative;
+  color: black;
+  font-size: 20px;
+  left: 0px;
+  bottom: 0px;
+}
+
+.save-btn {
       display: flex;
       flex-direction: column;
       left: 300px;
@@ -188,7 +209,7 @@ img {
       padding: 15px; 
     }
 
-    .submit-btn {
+.submit-btn {
       display: flex;
       flex-direction: column;
       left: 200px;
@@ -196,12 +217,13 @@ img {
       padding: 8px; 
     }
 
-    #update-btn {
+#update-btn {
       position: relative;
-      bottom: 500px;
+      bottom: 0px;
+      left: -200px;
     }
   
-    .dropdown-content {
+.dropdown-content {
       display: flex;
       flex-direction: column;
       min-width: 100%; 
@@ -209,7 +231,7 @@ img {
       left: 100px;
     }
   
-    .dropbtn {
+.dropbtn {
       display: flex;
       flex-direction: column;
       font-size: 16px; 
@@ -219,104 +241,34 @@ img {
     #signup {
       position: relative;
     }
-    #update-btn {
-      position: relative; 
-      left: 200px;
-    }
+
   }
 
+@media screen and (max-width: 800px) {
 
-  @media screen and (max-width: 920px) {
-
-    h1 {
-      font-size: 28px; 
-      padding: 8px; 
-    }
-  
-    img {
-      display: flex;
-      flex-direction: column;
-    }
-  
-    .preset {
-      display: flex;
-      flex-direction: column;
-      left: 200px;
-    }
-
-    .form-input {
-      padding: 10px; 
-    }
-  
-    .save-btn {
-      display: flex;
-      flex-direction: column;
-      left: 200px;
-      font-size: 20px; 
-      padding: 15px; 
-    }
-
-    .submit-btn {
-      display: flex;
-      flex-direction: column;
-      left: 200px;
-      font-size: 20px; 
-      padding: 8px; 
-    }
-  
-    .dropdown-content {
-      display: flex;
-      flex-direction: column;
-      min-width: 100%; 
-      top: 100px; 
-      left: 100px;
-    }
-  
-    .dropbtn {
-      display: flex;
-      flex-direction: column;
-      font-size: 16px; 
-      padding: 8px; 
-      left: 100px;
-    }
-    #signup {
-      position: relative;
-      font-size: 15px;
-      left: -5px;
-      top: -60px;
-        }
-
-    #update-btn {
-      position: relative; 
-      left: 200px;
-    }
-  }
-  
-  @media screen and (max-width: 600px) {
-
-    h1 {
+h1 {
       font-size: 28px;
       padding: 8px; 
     }
   
-    img {
+img {
       display: flex;
       flex-direction: column;
       left: -10px;
     }
   
-    .preset {
+.preset {
       display: flex;
       flex-direction: column;
       left: 200px;
     }
 
-    .form-input {
+.form-input {
       padding: 10px; 
       left: 100px;
     }
   
-    .save-btn {
+.save-btn {
       display: flex;
       flex-direction: column;
       left: 200px;
@@ -324,7 +276,7 @@ img {
       padding: 15px; 
     }
 
-    .submit-btn {
+.submit-btn {
       display: flex;
       flex-direction: column;
       left: 100px;
@@ -332,7 +284,7 @@ img {
       padding: 8px; 
     }
   
-    .dropdown-content {
+.dropdown-content {
       display: flex;
       flex-direction: column;
       min-width: 100%; 
@@ -340,7 +292,7 @@ img {
       left: 100px;
     }
   
-    .dropbtn {
+.dropbtn {
       display: flex;
       flex-direction: column;
       font-size: 16px; 
@@ -348,7 +300,7 @@ img {
       left: 100px;
     }
 
-    #signup {
+#signup {
       position: relative; 
       font-size: 10px;
       margin: -5px;
@@ -356,10 +308,180 @@ img {
       left: 10px;
     }
 
-    #update-btn {
+#update-btn {
       position: relative; 
+      left: 0px;
+    }
+
+.update-input .MuiListItemText-primary{
+  position: relative;
+  color: black;
+  font-size: 15px;
+  left: 0px;
+  bottom: 0px;
+}
+
+  }
+  
+@media screen and (max-width: 600px) {
+
+h1 {
+      font-size: 28px;
+      padding: 8px; 
+    }
+  
+img {
+      display: flex;
+      flex-direction: column;
+      left: -10px;
+    }
+  
+.preset {
+      display: flex;
+      flex-direction: column;
       left: 200px;
     }
+
+.form-input {
+      padding: 10px; 
+      left: 100px;
+    }
+  
+.save-btn {
+      display: flex;
+      flex-direction: column;
+      left: 200px;
+      font-size: 20px; 
+      padding: 15px; 
+    }
+
+.submit-btn {
+      display: flex;
+      flex-direction: column;
+      left: 100px;
+      font-size: 20px; 
+      padding: 8px; 
+    }
+  
+.dropdown-content {
+      display: flex;
+      flex-direction: column;
+      min-width: 100%; 
+      top: 100px; 
+      left: 100px;
+    }
+  
+.dropbtn {
+      display: flex;
+      flex-direction: column;
+      font-size: 16px; 
+      padding: 8px; 
+      left: 100px;
+    }
+
+#signup {
+      position: relative; 
+      font-size: 10px;
+      margin: -5px;
+      top: -40px;
+      left: 10px;
+    }
+
+#update-btn {
+      position: relative; 
+      left: 0px;
+    }
+
+.update-input .MuiListItemText-primary{
+  position: relative;
+  color: black;
+  font-size: 15px;
+  left: 0px;
+  bottom: 0px;
+}
+
+  }
+
+@media screen and (max-width: 450px) {
+
+h1 {
+      font-size: 20px;
+      padding: 8px; 
+    }
+  
+img {
+      display: flex;
+      flex-direction: column;
+      left: -10px;
+    }
+  
+.preset {
+      display: flex;
+      flex-direction: column;
+      left: 0px;
+      width: 100%; 
+    }
+
+.form-input {
+      padding: 10px; 
+      left: 100px;
+    }
+  
+.save-btn {
+      display: flex;
+      flex-direction: column;
+      left: 0px;
+      font-size: 20px; 
+      padding: 15px; 
+    }
+
+.submit-btn {
+      display: flex;
+      flex-direction: column;
+      left: 100px;
+      font-size: 20px; 
+      padding: 8px; 
+    }
+  
+.dropdown-content {
+      display: flex;
+      flex-direction: column;
+      min-width: 100%; 
+      top: 100px; 
+      left: 100px;
+    }
+  
+.dropbtn {
+      display: flex;
+      flex-direction: column;
+      font-size: 16px; 
+      padding: 8px; 
+      left: 100px;
+    }
+
+#signup {
+      position: relative; 
+      font-size: 10px;
+      margin: -5px;
+      top: -40px;
+      left: 10px;
+    }
+
+#update-btn {
+      position: relative; 
+      left: 0px;
+      top: 25px;
+      font-size: 15px; 
+      padding: 5px; 
+    }
+
+.update-input .MuiListItemText-primary{
+  position: relative;
+  color: black;
+  font-size: 15px;
+  left: 0px;
+  bottom: 0px;
+}
 
   }
 
