@@ -115,8 +115,8 @@ const KnobUpdater = ({ pedalsettingId, pedalsetting }) => {
     }
   };
 
-  if (loading) return;
-  if (error) return <p>{error.message}</p>;
+  if (loading) return <p>Boating...</p>;
+  if (error) return <p>Error: {error.message}</p>;
 
 // Update Page Layout
 
