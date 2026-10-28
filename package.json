@@ -2,7 +2,7 @@
   "name": "guitar rig saver",
   "version": "1.0.0",
   "engines": {
-  "node": "26.10.0"
+    "node": "26.10.0"
   },
   "description": "take 4, fourth start over",
   "main": "index.js",
@@ -22,7 +22,7 @@
     "@mui/material": "^5.11.14",
     "concurrently": "^7.6.0",
     "jsonwebtoken": "^9.0.0",
-    "mongodb": "^5.2.0",
+    "mongodb": "^5.9.2",
     "react-bootstrap": "^2.10.5",
     "react-slideshow-image": "^4.3.2",
     "uuid": "^9.0.0"
