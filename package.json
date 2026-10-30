@@ -2,13 +2,13 @@
   "name": "guitar rig saver",
   "version": "1.0.0",
   "engines": {
-  "node": "26.10.0"
+    "node": ">=22.0.0"
   },
   "description": "take 4, fourth start over",
   "main": "index.js",
   "scripts": {
     "start": "node server/server.js",
-    "develop": "concurrently \"nodemon server/server.js --ignore client\" \"npm run start --prefix client\"",
+    "dev": "concurrently \"nodemon server/server.js --ignore client\" \"npm run start --prefix client\"",
     "install": "cd server && npm i && cd ../client && npm i",
     "seed": "npm run seed --prefix server",
     "build": "npm run build --prefix client"
@@ -26,5 +26,8 @@
     "react-bootstrap": "^2.10.5",
     "react-slideshow-image": "^4.3.2",
     "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
   }
 }
