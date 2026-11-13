@@ -2,7 +2,7 @@
   "name": "guitar rig saver",
   "version": "1.0.0",
   "engines": {
-    "node": ">=22.0.0"
+    "node": "20.x"
   },
   "description": "take 4, fourth start over",
   "main": "index.js",
