@@ -7,11 +7,13 @@
   "description": "take 4, fourth start over",
   "main": "index.js",
   "scripts": {
-    "start": "node server/server.js",
-    "dev": "concurrently \"nodemon --exec \\\"node \\\" server/server.js --ignore client\" \"npm run start --prefix client\"",
-    "install": "cd server && npm i && cd ../client && npm i",
-    "seed": "npm run seed --prefix server",
-    "build": "npm run build --prefix client"
+  "start": "node server/server.js",
+  "server": "nodemon server/server.js --ignore client",
+  "client": "npm run start --prefix client",
+  "dev": "concurrently \"npm run server\" \"npm run client\"",
+  "install-all": "npm install && npm install --prefix server && npm install --prefix client",
+  "seed": "npm run seed --prefix server",
+  "build": "npm run build --prefix client"
   },
   "keywords": [],
   "author": "",
