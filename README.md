@@ -8,7 +8,7 @@
 * Update or remove them. 
 
 ![image 1](./demo/expedal.png) 
-![image 2](./demo/expedal2.png) 
+![image 2](./demo/expedal2.PNG) 
 
 
 ## Deploy (Heroku)
