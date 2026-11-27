@@ -1,6 +1,6 @@
 # Stomp Box Saver
 
-## Save settings for your favorite stompbox. 
+## Save settings from your favorite stomp boxes. 
 ## Includes classic signature models to chose from when your performing or practicing at home.
 
 * Select a type.
